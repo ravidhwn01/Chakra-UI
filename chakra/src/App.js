@@ -24,7 +24,7 @@ function App() {
         >
           <VStack align={"flex-start"} spacing={2}>
             <Heading>Your details</Heading>
-            <Text>hello, this is Chakra UI tutorial</Text>
+            <Text>This is your path to follow</Text>
           </VStack>
           <SimpleGrid columns={2} columnGap={3} rowGap={2}>
             <GridItem colSpan={1}>
@@ -37,6 +37,12 @@ function App() {
               <FormControl>
                 <FormLabel>last Name</FormLabel>
                 <Input placeholder="Enter Your last Name" />
+              </FormControl>
+            </GridItem>
+            <GridItem colSpan={2}>
+              <FormControl>
+                <FormLabel>Address</FormLabel>
+                <Input placeholder="Enter Your Address" />
               </FormControl>
             </GridItem>
           </SimpleGrid>
