@@ -2,11 +2,13 @@ import {
   Button,
   Checkbox,
   Container,
+  Divider,
   Flex,
   FormControl,
   FormLabel,
   GridItem,
   Heading,
+  HStack,
   Input,
   Select,
   SimpleGrid,
@@ -46,8 +48,7 @@ function App() {
             <GridItem colSpan={2}>
               <FormControl>
                 <FormLabel>Address</FormLabel>
-                <Textarea placeholder="Enter Your Address...">
-                </Textarea>
+                <Textarea placeholder="Enter Your Address..."></Textarea>
               </FormControl>
             </GridItem>
             <GridItem colSpan={1}>
@@ -59,33 +60,38 @@ function App() {
             <GridItem colSpan={1}>
               <FormControl>
                 <FormLabel>last Name</FormLabel>
-                <Select placeholder="Select City" >
-                  <option value={"india"} >India</option>
+                <Select placeholder="Select City">
+                  <option value={"india"}>India</option>
                 </Select>
               </FormControl>
             </GridItem>
             <GridItem colSpan={2}>
               <FormControl>
-                <Checkbox>
-                  I agree to the terms and conditions
-                </Checkbox>
+                <Checkbox>I agree to the terms and conditions</Checkbox>
               </FormControl>
             </GridItem>
-            <GridItem colSpan={2} >
-            <Button width={"full"} size = "lg" >
-              Submit
-            </Button>
-
+            <GridItem colSpan={2}>
+              <Button width={"full"} size="lg">
+                Submit
+              </Button>
             </GridItem>
           </SimpleGrid>
         </VStack>
-        <VStack
-          bg={"gray.500"}
-          w="full"
-          p={10}
-          spacing={10}
-          align="flex-start"
-        ></VStack>
+        <VStack bg={"gray.500"} w="full" p={10} spacing={10} align="flex-start">
+          <HStack justifyContent={"space-between"}>
+            <Text>Enter your details</Text>
+            <Heading size={"sm"}>Step 1</Heading>
+          </HStack>
+          <HStack justifyContent={"space-between"}>
+            <Text>Enter your details</Text>
+            <Heading size={"sm"}>Step 1</Heading>
+          </HStack>
+          <HStack justifyContent={"space-between"}>
+            <Text>Enter your details</Text>
+            <Heading size={"sm"}>Step 1</Heading>
+          </HStack>
+          <Divider />
+        </VStack>
       </Flex>
     </Container>
   );
