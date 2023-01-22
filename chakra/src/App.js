@@ -1,4 +1,6 @@
 import {
+  Button,
+  Checkbox,
   Container,
   Flex,
   FormControl,
@@ -6,14 +8,16 @@ import {
   GridItem,
   Heading,
   Input,
+  Select,
   SimpleGrid,
   Text,
+  Textarea,
   VStack,
 } from "@chakra-ui/react";
 
 function App() {
   return (
-    <Container maxWidth="container.lg">
+    <Container maxWidth="container.xl">
       <Flex h="100vh" py={20}>
         <VStack
           bg={"green.400"}
@@ -26,7 +30,7 @@ function App() {
             <Heading>Your details</Heading>
             <Text>This is your path to follow</Text>
           </VStack>
-          <SimpleGrid columns={2} columnGap={3} rowGap={2}>
+          <SimpleGrid columns={2} columnGap={3} rowGap={4}>
             <GridItem colSpan={1}>
               <FormControl>
                 <FormLabel>First Name</FormLabel>
@@ -42,8 +46,36 @@ function App() {
             <GridItem colSpan={2}>
               <FormControl>
                 <FormLabel>Address</FormLabel>
-                <Input placeholder="Enter Your Address" />
+                <Textarea placeholder="Enter Your Address...">
+                </Textarea>
               </FormControl>
+            </GridItem>
+            <GridItem colSpan={1}>
+              <FormControl>
+                <FormLabel>City</FormLabel>
+                <Input placeholder="Enter City" />
+              </FormControl>
+            </GridItem>
+            <GridItem colSpan={1}>
+              <FormControl>
+                <FormLabel>last Name</FormLabel>
+                <Select placeholder="Select City" >
+                  <option value={"india"} >India</option>
+                </Select>
+              </FormControl>
+            </GridItem>
+            <GridItem colSpan={2}>
+              <FormControl>
+                <Checkbox>
+                  I agree to the terms and conditions
+                </Checkbox>
+              </FormControl>
+            </GridItem>
+            <GridItem colSpan={2} >
+            <Button width={"full"} size = "lg" >
+              Submit
+            </Button>
+
             </GridItem>
           </SimpleGrid>
         </VStack>
